@@ -1,0 +1,26 @@
+h2{
+    animation-name: rainbow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes rainbow{
+    0%{
+        box-shadow:2px 2px 20px red;
+    }
+    33%{
+        box-shadow:2px 2px 20px yellow;
+    }
+    66%{
+        box-shadow:2px 2px 20px blue;
+    }
+    100%{
+        box-shadow:2px 2px 20px red;
+    }
+}
+canvas{
+    background-color: pink;
+    border-radius: 20px;
+    border: 5px solid red;
+}
+
+
