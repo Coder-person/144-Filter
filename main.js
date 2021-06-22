@@ -2,7 +2,7 @@ underNoseX = 0;
 underNoseY = 0;
 
 function preload(){
-
+    moustache = loadImage("https://i.postimg.cc/3x3QzSGq/m.png")
 }
 
 function setup(){
@@ -22,8 +22,8 @@ function modelLoaded(){
 function Poses(results){
     if(results.length > 0){
         console.log(results);
-        underNoseX = results[0].pose.nose.x - 20;
-        underNoseY = results[0].pose.nose.y + 20;
+        underNoseX = results[0].pose.nose.x - 30;
+        underNoseY = results[0].pose.nose.y + 2;
         console.log("Underneath nose X coord = "+underNoseX);
         console.log("Underneath nose Y coord = "+underNoseY);
     }
@@ -31,6 +31,7 @@ function Poses(results){
 
 function draw(){
     image(video,0,0,450,450);
+    image(moustache,underNoseX,underNoseY,65,45);
 }
 
 function take_snapshot(){
